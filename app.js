@@ -16,8 +16,9 @@ app.get('/getNumbers', function(req, res) {
 });
 
 app.get('/updateNumbers', function(req, res) {
-    console.log("Updating numbers");
-    updateNumbers(req.params.count);
+    var count = req.param('count');
+    console.log("Updating numbers with " + count + " random numbers!");
+    updateNumbers(count);
     res.send(getNumbers());
 });
 
@@ -47,5 +48,5 @@ function updateNumbers(count) {
 }
 
 function getRandomNumber() {
-    return  Math.floor((Math.random() * 100) + 1);
+    return  Math.floor((Math.random() * 200) + 1);
 }
