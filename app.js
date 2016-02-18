@@ -5,7 +5,7 @@ var app = express();
 var term1, term2, sum, randoNums;
 
 // update these numbers to an initial state
-updateNumbers(0);
+updateNumbers(10);
 
 // start listening
 app.listen(8081);
@@ -15,8 +15,8 @@ app.get('/getNumbers', function(req, res) {
     res.send(getNumbers());
 });
 
-app.get('/updateNumbers', function(req, res) {
-    var count = req.param('count');
+app.get('/updateNumbers/:count', function(req, res) {
+    var count = req.params.count;
     console.log("Updating numbers with " + count + " random numbers!");
     updateNumbers(count);
     res.send(getNumbers());
