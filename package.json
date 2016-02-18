@@ -1,5 +1,5 @@
 {
-  "name": "ZombieMathServer",
+  "name": "mathzombieserver",
   "version": "0.0.1",
   "main": "app.js",
   "dependencies": {
@@ -11,5 +11,13 @@
   },
   "author": "",
   "license": "ISC",
-  "description": "Numbersssssss"
+  "description": "Numbersssssss",
+  "repository": {
+    "type": "git",
+    "url": "git+https://kksiu@github.com/UW-Enlight/MathZombiesServer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/UW-Enlight/MathZombiesServer/issues"
+  },
+  "homepage": "https://github.com/UW-Enlight/MathZombiesServer#readme"
 }
