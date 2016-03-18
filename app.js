@@ -8,7 +8,7 @@ var term1, term2, sum, randoNums;
 updateNumbers(10);
 
 // start listening
-app.listen(8081);
+app.listen(80);
 
 app.get('/getNumbers', function(req, res) {
     console.log("Getting the numbers");
