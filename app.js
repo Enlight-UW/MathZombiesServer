@@ -30,14 +30,14 @@ function getNumbers() {
 }
 
 function updateNumbers(count) {
-    term1 = getRandomNumber(0, 100);
-    term2 = getRandomNumber(0, 100);
+    term1 = getRandomNumber(0, 20);
+    term2 = getRandomNumber(0, 20);
     sum = term1 + term2;
 
     randoNums = [];
 
-    var low = sum - 20;
-    var high = sum + 20;
+    var low = sum - 5;
+    var high = sum + 5;
 
     // get a variety of random numbers
     for(var i = 0; i < count; i++) {
