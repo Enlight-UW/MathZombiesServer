@@ -30,23 +30,26 @@ function getNumbers() {
 }
 
 function updateNumbers(count) {
-    term1 = getRandomNumber();
-    term2 = getRandomNumber();
+    term1 = getRandomNumber(0, 100);
+    term2 = getRandomNumber(0, 100);
     sum = term1 + term2;
 
     randoNums = [];
+
+    var low = sum - 20;
+    var high = sum + 20;
 
     // get a variety of random numbers
     for(var i = 0; i < count; i++) {
         var temp = 0;
         do {
-            temp = getRandomNumber();
+            temp = getRandomNumber(low, high);
         } while(temp == 0 || temp == sum || randoNums.indexOf(temp) > -1);
 
         randoNums.push(temp);
     }
 }
 
-function getRandomNumber() {
-    return  Math.floor((Math.random() * 200) + 1);
+function getRandomNumber(low, high) {
+    return  Math.floor((Math.random() * (high - Math.max(low, 0) + 1)) + low);
 }
