@@ -29,7 +29,24 @@ function getNumbers() {
         ", \"randoNums\": [" + randoNums.join(',') + "]}";
 }
 
+// checks if it is integer
+function isInt(value) {
+    return !isNaN(value) &&
+        parseInt(Number(value)) == value &&
+        !isNaN(parseInt(value, 10));
+}
+
 function updateNumbers(count) {
+
+    // bind count
+    if(isInt(count)) {
+        if (count < 0) {
+            count = 0;
+        } else if (count > 5) {
+            count = 5;
+        }
+    }
+
     term1 = getRandomNumber(0, 20);
     term2 = getRandomNumber(0, 20);
     sum = term1 + term2;
