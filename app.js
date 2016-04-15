@@ -47,14 +47,14 @@ function updateNumbers(count) {
         }
     }
 
-    term1 = getRandomNumber(0, 20);
-    term2 = getRandomNumber(0, 20);
+    term1 = getRandomNumber(0, 30);
+    term2 = getRandomNumber(0, 30);
     sum = term1 + term2;
 
     randoNums = [];
 
-    var low = sum - 5;
-    var high = sum + 5;
+    var low = sum - 10;
+    var high = sum + 10;
 
     // get a variety of random numbers
     for(var i = 0; i < count; i++) {
@@ -68,5 +68,6 @@ function updateNumbers(count) {
 }
 
 function getRandomNumber(low, high) {
-    return  Math.floor((Math.random() * (high - Math.max(low, 0) + 1)) + low);
+    var newLow = Math.max(low, 0);
+    return  Math.floor((Math.random() * (high - newLow + 1)) + newLow);
 }
